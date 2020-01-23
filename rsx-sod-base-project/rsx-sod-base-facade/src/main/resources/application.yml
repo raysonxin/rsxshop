@@ -1,0 +1,37 @@
+server:
+  port: 8080
+
+spring:
+  project:
+    name: rsx-shop
+  application:
+    name: rsx-sod-base-project
+  profiles:
+    active: DEV
+
+  datasource:
+    type: com.alibaba.druid.pool.DruidDataSource
+    druid:
+      driver-class-name: com.mysql.cj.jdbc.Driver
+      url: jdbc:mysql://localhost:3306/rsx_base?autoReconnect=true&allowMultiQueries=true&useUnicode=true&characterEncoding=utf8&zeroDateTimeBehavior=convertToNull&useSSL=false&serverTimezone=Asia/Shanghai
+      username: root
+      password: 761217xin
+
+  redis:
+    password:
+    #单机版
+    database: 0
+    host: localhost
+    port: 6379
+    #集群版
+#    cluster:
+#      nodes:
+#        - localhost:6379
+#        - localhost:6389
+#      max-redirects: 5
+#    lettuce:
+#      pool:
+#        max-active: 80
+#        max-wait: 10000
+#        max-idle: 50
+#        min-idle: 20

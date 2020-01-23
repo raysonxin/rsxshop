@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.rsxshop.rsx.sod.base.dao.mapper.BaseSkuCategoryDao">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="com.rsxshop.rsx.sod.base.dao.model.BaseSkuCategory">
+        <id column="id" property="id" />
+        <result column="sku_code" property="skuCode" />
+        <result column="cat_code" property="catCode" />
+        <result column="cat_full_path" property="catFullPath" />
+        <result column="created_time" property="createdTime" />
+        <result column="created_by" property="createdBy" />
+    </resultMap>
+
+</mapper>

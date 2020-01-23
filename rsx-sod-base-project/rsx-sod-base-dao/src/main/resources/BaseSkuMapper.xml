@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.rsxshop.rsx.sod.base.dao.mapper.BaseSkuDao">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="com.rsxshop.rsx.sod.base.dao.model.BaseSku">
+        <id column="id" property="id" />
+        <result column="source_type" property="sourceType" />
+        <result column="sku_name" property="skuName" />
+        <result column="subtitle" property="subtitle" />
+        <result column="sku_code" property="skuCode" />
+        <result column="upc" property="upc" />
+        <result column="main_image" property="mainImage"/>
+        <result column="brand_id" property="brandId" />
+        <result column="gross_weight" property="grossWeight" />
+        <result column="specs" property="specs" />
+        <result column="unit" property="unit" />
+        <result column="origin_place" property="originPlace" />
+        <result column="shelf_life" property="shelfLife" />
+        <result column="storage_way" property="storageWay" />
+        <result column="length" property="length" />
+        <result column="width" property="width" />
+        <result column="height" property="height" />
+        <result column="enabled" property="enabled" />
+        <result column="created_time" property="createdTime" />
+        <result column="created_by" property="createdBy" />
+        <result column="updated_time" property="updatedTime" />
+        <result column="updated_by" property="updatedBy" />
+        <result column="is_delete" property="isDelete" />
+    </resultMap>
+
+</mapper>

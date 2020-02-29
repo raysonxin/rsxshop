@@ -6,7 +6,10 @@ import com.rsxshop.rsx.sod.base.dao.model.BaseSku;
 import com.rsxshop.rsx.sod.base.dao.mapper.BaseSkuDao;
 import com.rsxshop.rsx.sod.base.service.IBaseSkuService;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Propagation;
+import org.springframework.transaction.annotation.Transactional;
 import org.springframework.util.StringUtils;
 
 import java.util.List;
@@ -21,7 +24,9 @@ import java.util.UUID;
  * @since 2020-01-07
  */
 @Service
+@Slf4j
 public class BaseSkuServiceImpl extends ServiceImpl<BaseSkuDao, BaseSku> implements IBaseSkuService {
+
 
     @Override
     public List<BaseSku> querySku(String code, String upc, String name) {
@@ -31,6 +36,7 @@ public class BaseSkuServiceImpl extends ServiceImpl<BaseSkuDao, BaseSku> impleme
                 .like(!StringUtils.isEmpty(name), "sku_name", name)     //sku_name 模糊匹配
                 .last("limit 10");                                      //最多返回10条
 
+        log.info("querySku:here");
         List<BaseSku> skuList = baseMapper.selectList(wrapper);
         return skuList;
     }
